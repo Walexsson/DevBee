@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>iBeecode.com</title>
+        <link rel="stylesheet" href="practice.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+           
+            body{
+            min-height: 100vh;
+            background-image: url(computer.jpg);
+            backdrop-filter:  blur(5px);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        a:hover{
+            background-color: #24266656;
+        }
+                      
+           nav{
+            background-color: #03041d;
+            width: 100%;
+            height: 80px;
+          
+             }
+           .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+           }
+           .logo{
+            margin: 10px;
+            color: #fff;
+            font-size: 25px;
+            text-decoration: none;   
+           font-weight: bolder;  
+           border: 2px solid #fff;
+           padding: 7px;
+           border-radius: 20px;
+                     }
+           .nav-links{
+            display: flex;
+            
+            
+           }
+           
+           .nav-links li{
+            list-style: none;
+            margin: 0 6px;
+                        }
+           .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: light;
+            margin: 0 25px;
+            transition: all 0.3s ease;
+           }
+           .nav-links a:hover{
+            background: linear-gradient(to right, #b6b91a,#b91a1a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            }
+            .sidebar a:hover{
+            background: linear-gradient(to right, #b6b91a,#b91a1a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            }
+           .logo:hover{
+            background: linear-gradient(to right, #b6b91a,#b91a1a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            border: none;
+            padding: 9px;
+           }
+          
+           @media screen and (max-width: 760px) {
+            .nav-links li{
+                display: none;
+            }
+          
+           
+           }
+           @media(max-width: 800px){
+            .hideOnMobile{
+                display: none;
+                       
+            }
+            }
+            
+            @media (max-width:400px) {
+                .sidebar{
+                    width: 100%;
+                }
+                
+            }
+           
+           footer{
+            position: fixed;
+            bottom: 0;
+            background-color: #03041d;
+            color: #fff;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 0%;
+           }
+           .sidebar{
+            background-color: #03041da4;
+            backdrop-filter:blur(10px) ;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100vh;
+            z-index: 999;
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.425);
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            }
+           .sidebar li{
+            list-style: none;
+            margin-top: 20px;
+            margin-left: 20px;
+                 
+            }
+            .sidebar a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .menu-button{
+                list-style: none;
+                margin-right: 20px;
+              
+            }
+            .searchBar{
+                height:30px ;
+            }
+            .search{
+                background-color: rgba(255, 255, 255, 0.288);
+                border: white solid 1px;
+                border-radius: 6px;
+                height: 30px;
+                
+            }
+            label{
+                /* color: white;
+                font-weight: bold; */
+                background-color: #fff;
+                padding: 2px;
+                border-radius: 5px;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                color: #03041d;
+                font-weight: bold;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="container">
+                <a href="#logo" class="logo">iBeeCode</a>
+                <ul class="nav-links">                    
+                    <li class="hideOnMobile"> <a href="index.html">Home</a> </li>
+                    <li class="hideOnMobile"> <a href="service">Service</a> </li>
+                    <li class="hideOnMobile"> <a href="#contact">Contact</a> </li>
+                    <li class="hideOnMobile"> <a href="#about_us">About</a> </li>
+                    <li class="hideOnMobile"> <a href="signup-page.html">Login</a> </li>
+                                       
+                </ul>
+                <div class="searchBar">
+                    <input type="search" name="search id="search" class="" placeholder="Search..." />
+                    <i class="fas fa-search"></i>
+                <!-- <label for="search">Search</label> -->
+                </div>
+                <li class="menu-button" onclick=showSlidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a> </li>          
+            </div>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()> <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></a> </li>
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="service">Service</a> </li>
+                <li> <a href="#contact">Contact</a> </li>
+                <li> <a href="#about_us">About</a> </li>
+                <li > <a href="signup-page.html">Login</a> </li>
+            </ul>
+            <!-- <button class="hamburger" onclick="o()">&#9776;</button> -->
+            <!-- <button class="hamburger"onclick="o()">☰</button> -->
+            </nav>
+            
+        </header>
+        <footer>
+            © iBeeCode All rights reserved. 2024
+        </footer>
+        <script>
+            function showSlidebar(){
+                const sidebar =  document.querySelector(".sidebar");
+                sidebar.style.display = "flex";
+            }
+            function hideSidebar(){
+                const sidebar =  document.querySelector(".sidebar");
+                sidebar.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
