@@ -10,7 +10,11 @@
                 line-height: 1.6;
                 margin: 0;
                 padding: 0;
-            }           
+            }      
+      header{
+                 position: fixed;
+      }
+     
            
         a:hover{
             background-color: #24266656;
