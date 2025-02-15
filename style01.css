@@ -3,6 +3,11 @@
                 padding: 0;
             }
 
+header{
+
+           position: fixed
+}
+
             body {
                 min-height: 100vh;
                 background-color:#080b0c;
