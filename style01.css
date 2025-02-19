@@ -1,6 +1,7 @@
             *{
                 margin: 0;
                 padding: 0;
+                box-sizing: border-box;
             }
 
 header{
@@ -10,7 +11,7 @@ header{
            left: 0;
            width: 100%;
            z-index:1000;
-           padding: 80px;
+           padding-bottom: 80px;
 }
 
             body {
@@ -223,6 +224,10 @@ header{
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 /* Introduction Section */
@@ -236,6 +241,10 @@ header{
     width: 150px;
     border-radius: 50%;
     margin-bottom: 20px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 /* Skills and Services Section */
@@ -277,6 +286,10 @@ header{
     width: 100%;
     height: auto;
     border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .view-more {
@@ -287,6 +300,10 @@ header{
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 /* Testimonials Section */
@@ -315,7 +332,10 @@ header{
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 .see-my-work, .get-in-touch{
     margin-top: 15px;
