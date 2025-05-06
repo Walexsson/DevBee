@@ -2,24 +2,30 @@
 <html lang="en">
 <head>
     <title>DevBee.com</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="welcome-enhancements.css">
+    <!-- <link rel="stylesheet" href="completed-style.css"> -->
     
 </head>
 <body>
     <header>
         <nav>
             <div class="container">
-                
-                <a href="#" class="menu-button" onclick="showSidebar()">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#cee7fe"/>
-                    </svg>
-                </a>
 
-                <a href="index.html" class="logo">DevBee</a>
+                <span class="hamlogo">
+                
+                    <a href="#" class="menu-button" onclick="showSidebar()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#cee7fe"/>
+                        </svg>
+                    </a>
+
+                    <a href="index.html" class="logo">DevBee</a>
+                </span>
            
                 <ul class="nav-links">
                     <li class="hideOnMobile"><a href="#home">Home</a></li>
@@ -29,6 +35,15 @@
                     <li class="hideOnMobile"><a href="#testimonials">Testimonials</a></li>
                     <li class="hideOnMobile"><a href="#contact">Contact</a></li>
                 </ul>
+
+                <div class="nav-social">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+
                 <div class="searchBar">
                     <input type="search" name="search" id="search" class="search" placeholder="Search...">
                     <button type="submit" class="btn"><i class="fa fa-search"></i></button>
@@ -37,7 +52,7 @@
             </div>
             <ul class="sidebar">
                 <li onclick="hideSidebar()">
-                    <a id="hamburger" href="#">
+                    <a id="hamburger" href="javascript:void(0)">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                             <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="#cee7fe"/>
                         </svg>
@@ -54,6 +69,62 @@
         </nav>
     </header>
     <main id="home">
+
+        <section class="hero">
+            <div class="theme-switcher">
+              <button id="themeToggle">
+                <i class="fas fa-moon"></i>
+              </button>
+            </div>
+            
+            <div class="particles">
+              <!-- Add 10-15 of these with different positions/sizes -->
+              <div class="particle" style="--size: 3px; --x: 10%; --y: 30%;"></div>
+              <div class="particle" style="--size: 2px; --x: 80%; --y: 20%;"></div>
+              <!-- Add more particles... -->
+            </div>
+          
+            <div class="hero-content">
+              <div class="profile-container">
+                <img src="images/profile.png" class="profile-picture">
+                <div class="availability-badge">Available for work</div>
+              </div>
+              
+              <div class="intro-text">
+                <h1>
+                  <span class="typed-text"></span>
+                  <span class="cursor">&nbsp;</span>
+                </h1>
+                <p>Crafting user-friendly and visually appealing web experiences.</p>
+                
+                <div class="tech-stack">
+                  <i class="fab fa-html5" data-tooltip="HTML5"></i>
+                  <i class="fab fa-css3-alt" data-tooltip="CSS3"></i>
+                  <i class="fab fa-js" data-tooltip="JavaScript"></i>
+                  <i class="fab fa-react" data-tooltip="React"></i>
+                  <!-- Add more icons -->
+                </div>
+                
+                <div class="stats">
+                  <div class="stat">
+                    <span class="counter" data-target="12">0</span>
+                    <p>Projects Completed</p>
+                  </div>
+                </div>
+                
+                <div class="cta-container">
+                  <a href="#portfolio" class="cta-button">See My Work</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
         <section class="hero">
             <div class="hero-content" data-animation="fadeIn">
                 <h1 id="animated-text">Welcome to DevBee's Portfolio</h1>
@@ -65,27 +136,127 @@
         </section>
 
         <hr>
-        
-        <section id="about" class="introduction">
-            <img src="images/profile.png" alt="DevBee Profile Picture" class="profile-picture" data-animation="zoomIn">
-            <h2 data-animation="slideUp">Hi, I'm Ibrahim Olawale</h2>
-            <p class="about" data-animation="slideUp">Also known in the coding world as DevBee. I'm a passionate frontend web developer with a keen eye for design. I bring creative solutions to life by crafting user-friendly and visually appealing web experiences.</p>
-        </section>
-        
-        <section id="skills" class="skills-services">
-            <h2 data-animation="slideUp">My Skills and Services</h2>
-            <div class="skills">
-                <div class="skill" data-animation="slideRight">
-                    <h3>Frontend Development</h3>
-                    <p>Creating responsive and interactive websites using HTML, CSS, and JavaScript.</p>
+
+         <!-- Updated About Section (iPortfolio style) -->
+         <section id="about" class="about-section">
+            <div class="section-title" data-animation="slideUp">
+                <h2>About Me</h2>
+                <p>Learn more about me</p>
+            </div>
+            
+            <div class="about-container" data-animation="fadeIn">
+
+                <h3>Frontend Developer | Problem Solver | Digital Craftsman</h3>
+                <p class="about-text">
+                    I translate vision into reality through code. My journey from administrative professional to frontend developer has equipped me with exceptional attention to detail and a deep understanding of what makes digital experiences truly work.
+                </p>
+                <div class="about-img" data-animation="slideRight">
+                    <img src="images/profile.png" alt="DevBee Profile Picture" class="profile-picture">
                 </div>
-                <div class="skill" data-animation="slideLeft">
-                    <h3>Graphic Design</h3>
-                    <p>Designing visually appealing graphics and branding materials.</p>
+                
+                <div class="about-content" data-animation="slideLeft">
+                                       
+                    <div class="about-info">
+                        <div class="about-info-item">
+                            <i class="fas fa-chevron-right"></i>
+                            <strong>Website:</strong> <span>walexsson.github.io/DevBee/</span>
+                        </div>
+                        <div class="about-info-item">
+                            <i class="fas fa-chevron-right"></i>
+                            <strong>Phone:</strong> <span>+234 810 420 2956</span>
+                        </div>
+                        <div class="about-info-item">
+                            <i class="fas fa-chevron-right"></i>
+                            <strong>City:</strong> <span>Oyo, Nigeria</span>
+                        </div>
+                        <div class="about-info-item">
+                            <i class="fas fa-chevron-right"></i>
+                            <strong>Email:</strong> <span>Walexson@gmail.com</span>
+                        </div>
+                        <div class="about-info-item">
+                            <i class="fas fa-chevron-right"></i>
+                            <strong>Freelance:</strong> <span>Available</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         
+        <!-- Updated Skills Section (iPortfolio style) -->
+        <section id="skills" class="skills-section">
+            <div class="section-title" data-animation="slideUp">
+                <h2>Skills</h2>
+                <p>My Technical Expertise</p>
+            </div>
+            
+            <div class="skills-container" data-animation="fadeIn">
+                <div class="skills-content" data-animation="fadeIn">
+                    <p>
+                        As a frontend developer, I specialize in creating responsive and interactive websites 
+                        that provide exceptional user experiences. Below are my key technical skills and proficiency levels.
+                    </p>
+                </div>
+                
+                <div class="skills-list" data-animation="slideUp">
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                            <span class="skill-percentage">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <i class="fas fa-palette"></i>
+                            <span>Graphic Design</span>
+                            <span class="skill-percentage">55%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+                
         <section id="portfolio" class="portfolio-highlights">
             <h2 data-animation="slideUp">Portfolio Highlights</h2>
             <div class="portfolio-item" data-animation="zoomIn">
@@ -117,8 +288,228 @@
                 <a href="portfolio.html" class="view-more">View More Projects</a>
             </div>
         </section>
+
         
-        <section id="testimonials" class="testimonials">
+
+
+        <section id="testimonials" class="testimonials-section">
+    <div class="section-title" data-animation="slideUp">
+        <h2>Testimonials</h2>
+        <p>What My Clients Say</p>
+    </div>
+    
+    <div class="testimonials-container" data-animation="fadeIn">
+        <div class="testimonial-item" data-animation="fadeIn">
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            
+            <p class="testimonial-quote">
+                DevBee did an amazing job on our website. The attention to detail and responsiveness to our needs exceeded our expectations. Highly recommend!
+            </p>
+            
+            <div class="testimonial-profile">
+                <img src="images/testimonial-1.jpg" alt="John Smith" class="testimonial-img">
+                <div>
+                    <h3>John Smith</h3>
+                    <h4>CEO, Tech Solutions</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-item" data-animation="fadeIn">
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            
+            <p class="testimonial-quote">
+                Professional, creative, and incredibly responsive. The website DevBee created for our business has significantly improved our online presence.
+            </p>
+            
+            <div class="testimonial-profile">
+                <img src="images/testimonial-2.jpg" alt="Sarah Johnson" class="testimonial-img">
+                <div>
+                    <h3>Sarah Johnson</h3>
+                    <h4>Marketing Director, Design Studios</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-item" data-animation="fadeIn">
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            
+            <p class="testimonial-quote">
+                Working with DevBee was a pleasure from start to finish. They understood our vision perfectly and delivered a website that perfectly captures our brand identity.
+            </p>
+            
+            <div class="testimonial-profile">
+                <img src="images/testimonial-3.jpg" alt="Michael Brown" class="testimonial-img">
+                <div>
+                    <h3>Michael Brown</h3>
+                    <h4>Founder, Creative Agency</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-item" data-animation="fadeIn">
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            
+            <p class="testimonial-quote">
+                Partnering with DevBee to revamp our website was one of the best decisions we made last year. He delivered a modern, responsive design that elevated our brand's online presence.
+            </p>
+            
+            <div class="testimonial-profile">
+                <img src="images/testimonial-4.jpg" alt="Sarah M." class="testimonial-img">
+                <div>
+                    <h3>Sarah M.</h3>
+                    <h4>CEO, Thrive Retail</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-item" data-animation="fadeIn">
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            
+            <p class="testimonial-quote">
+                DevBee built us a custom web application that completely streamlined our internal operations. Every feature was thoughtfully implemented. Truly a developer you can rely on.
+            </p>
+            
+            <div class="testimonial-profile">
+                <img src="images/testimonial-5.jpg" alt="James K." class="testimonial-img">
+                <div>
+                    <h3>James K.</h3>
+                    <h4>Operations Lead, FinScope Solutions</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-item" data-animation="fadeIn">
+            <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            
+            <p class="testimonial-quote">
+                We needed an e-commerce platform that could handle high traffic. DevBee not only delivered — he added features we hadn't even thought of. We've seen a 40% sales boost since launch.
+            </p>
+            
+            <div class="testimonial-profile">
+                <img src="images/testimonial-6.jpg" alt="Amina R." class="testimonial-img">
+                <div>
+                    <h3>Amina R.</h3>
+                    <h4>Founder, Modé Wear</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+        
+        <!-- Updated Contact Section (iPortfolio style) -->
+        <section id="contact" class="contact-section">
+            <div class="section-title" data-animation="slideUp">
+                <h2>Contact</h2>
+                <p>Get In Touch With Me</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-animation="slideRight">
+                    <div class="contact-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location:</h3>
+                            <p>Oyo, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-email">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email:</h3>
+                            <p>contact@devbee.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Call:</h3>
+                            <p>+234 81 420 2956</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-animation="slideLeft">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="contact-button">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        
+    </footer>
+
+
+        
+        <!-- <section id="testimonials" class="testimonials">
             <h2 data-animation="slideUp">What Clients Say</h2>
             <div class="testimonial" data-animation="slideRight">
                 <p>"DevBee did an amazing job on our website. Highly recommend!" - Client Name</p>
@@ -126,22 +517,22 @@
             <div class="testimonial" data-animation="slideLeft">
                 <p>"Professional and creative. Exceeded our expectations!" - Client Name</p>
             </div>
-        </section>
-    </main>
-    
+        </section> -->
+        
     <footer>
-        <section id="contact" class="contact">
-            <h2 data-animation="slideUp">Contact Me</h2>
-            <p data-animation="fadeIn">Feel free to reach out for any project or collaboration.</p>
-            <div class="get-in-touch" data-animation="fadeIn">
-            <a href="contact.html" class="contact-button">Get in Touch</a>
-            </div>
-        </section>
+        <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
         <div class="all-rights-reserved">
-       <p> © DevBee All rights reserved. 2024 </p>
+            <p>© DevBee All rights reserved. 2025</p>
         </div>
     </footer>
     <script src="script.js"></script>
     <script src="repeatable-animations.js"></script>
+    <script src="welcome-animations.js"></script>
 </body>
 </html>

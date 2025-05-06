@@ -32,7 +32,8 @@ const animations = {
     duration: '1s',
     timing: 'ease-out'
   }
-};
+
+ };
 
 // Apply initial states to elements
 function initializeAnimations() {
@@ -121,3 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavigationAnimations();
   window.addEventListener('scroll', animateOnScroll);
 });
+
+
+//Debugging Function
+function debugAnimations() {
+  const elements = document.querySelectorAll('[data-animation]');
+  console.log('Animatable elements:', elements);
+  elements.forEach(el => {
+    console.log(el, 
+      'Type:', el.getAttribute('data-animation'),
+      'In viewport:', isInViewport(el),
+      'Animated:', el.classList.contains('animated')
+    );
+  });
+}
+// Call it after initialization
+debugAnimations();
