@@ -157,16 +157,15 @@
   content: '';
   position: absolute;
   inset: 0;
+  z-index: -1;
+
   border: 3px solid transparent;
   background: linear-gradient(45deg, var(--blue8), var(--blue11)) border-box;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) padding-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-          mask-composite: exclude;
-  animation: borderAnimation 8s linear infinite;
   background-size: 200% 200%;
-  z-index: -1;
+
+  
+  animation: borderAnimation 8s linear infinite;
+  -webkit-animation: borderAnimation 8s linear infinite;
 }
 
 @keyframes borderAnimation {
@@ -227,9 +226,10 @@
 
 /* 9. Theme Switcher */
 .theme-switcher {
-  position: absolute;
+  margin-right: 1.5rem;
+  /* position: absolute;
   top: 20px;
-  right: 20px;
+  right: 20px; */
 }
 
 #themeToggle {

@@ -1,7 +1,7 @@
 // Typing animation
 const typedTextSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector('.cursor');
-const textArray = ["Frontend Developer", "UI Specialist", "Problem Solver", "Digital Craftsman"];
+const textArray = ["Ibrahim Olawale", " a Frontend Developer", "a UI Specialist", "a Problem Solver", "a Digital Craftsman"];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 1500;

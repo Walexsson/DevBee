@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="welcome-enhancements.css">
-    <!-- <link rel="stylesheet" href="completed-style.css"> -->
+    <link rel="stylesheet" href="testimonial-section.css">
+    
     
 </head>
 <body>
@@ -44,13 +45,14 @@
                     <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
                 </div>
 
-                <div class="searchBar">
-                    <input type="search" name="search" id="search" class="search" placeholder="Search...">
-                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                <div class="theme-switcher">
+                    <button id="themeToggle">
+                      <i class="fas fa-moon"></i>
+                    </button>
                 </div>
-               
+            
             </div>
-            <ul class="sidebar">
+            <ul class="sidebar" data-animation="slideRight">
                 <li onclick="hideSidebar()">
                     <a id="hamburger" href="javascript:void(0)">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
@@ -71,68 +73,42 @@
     <main id="home">
 
         <section class="hero">
-            <div class="theme-switcher">
-              <button id="themeToggle">
-                <i class="fas fa-moon"></i>
-              </button>
-            </div>
-            
+
             <div class="particles">
-              <!-- Add 10-15 of these with different positions/sizes -->
-              <div class="particle" style="--size: 3px; --x: 10%; --y: 30%;"></div>
-              <div class="particle" style="--size: 2px; --x: 80%; --y: 20%;"></div>
-              <!-- Add more particles... -->
-            </div>
-          
-            <div class="hero-content">
-              <div class="profile-container">
-                <img src="images/profile.png" class="profile-picture">
-                <div class="availability-badge">Available for work</div>
+                <!-- Add 10-15 of these with different positions/sizes -->
+                <div class="particle" style="--size: 3px; --x: 10%; --y: 30%;"></div>
+                <div class="particle" style="--size: 2px; --x: 80%; --y: 20%;"></div>
+                <!-- Add more particles... -->
               </div>
-              
-              <div class="intro-text">
-                <h1>
-                  <span class="typed-text"></span>
-                  <span class="cursor">&nbsp;</span>
-                </h1>
-                <p>Crafting user-friendly and visually appealing web experiences.</p>
-                
-                <div class="tech-stack">
-                  <i class="fab fa-html5" data-tooltip="HTML5"></i>
-                  <i class="fab fa-css3-alt" data-tooltip="CSS3"></i>
-                  <i class="fab fa-js" data-tooltip="JavaScript"></i>
-                  <i class="fab fa-react" data-tooltip="React"></i>
-                  <!-- Add more icons -->
-                </div>
-                
-                <div class="stats">
-                  <div class="stat">
-                    <span class="counter" data-target="12">0</span>
-                    <p>Projects Completed</p>
+            
+                          
+                <div class="intro-text">
+                  <h1 class="hello-text">Hello, I'm
+                    <span class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
+                  </h1>
+                  <p>Crafting user-friendly and visually appealing web experiences.</p>
+                  
+                  <div class="tech-stack">
+                    <i class="fab fa-html5" data-tooltip="HTML5"></i>
+                    <i class="fab fa-css3-alt" data-tooltip="CSS3"></i>
+                    <i class="fab fa-js" data-tooltip="JavaScript"></i>
+                    <i class="fab fa-react" data-tooltip="React"></i>
+                    <!-- Add more icons -->
+                  </div>
+                  
+                  <div class="stats">
+                    <div class="stat">
+                      <span class="counter" data-target="12">0</span>
+                      <p>Projects Completed</p>
+                    </div>
+                  </div>
+                  
+                  <div class="cta-container">
+                    <a href="#portfolio" class="cta-button">See My Work</a>
                   </div>
                 </div>
-                
-                <div class="cta-container">
-                  <a href="#portfolio" class="cta-button">See My Work</a>
-                </div>
               </div>
-            </div>
-          </section>
-
-
-
-
-
-
-
-        <section class="hero">
-            <div class="hero-content" data-animation="fadeIn">
-                <h1 id="animated-text">Welcome to DevBee's Portfolio</h1>
-                <p>Crafting user-friendly and visually appealing web experiences.</p>
-                <div class="see-my-work">
-                    <a href="#portfolio" class="cta-button">See My Work</a>
-                </div>
-            </div>
         </section>
 
         <hr>
@@ -235,10 +211,10 @@
                         <div class="skill-name">
                             <i class="fab fa-react"></i>
                             <span>React</span>
-                            <span class="skill-percentage">70%</span>
+                            <span class="skill-percentage">50%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
+                            <div class="skill-progress" style="width: 50%"></div>
                         </div>
                     </div>
                     
@@ -258,7 +234,10 @@
         
                 
         <section id="portfolio" class="portfolio-highlights">
-            <h2 data-animation="slideUp">Portfolio Highlights</h2>
+            <div class="section-title" data-animation="slideUp">
+                <h2 data-animation="slideUp">Portfolio Highlights</h2>
+            </div>
+            
             <div class="portfolio-item" data-animation="zoomIn">
                 <a href="calculator\calculator.html">
                 <img src="images\DevBee Calculator.png" alt="Project 1">
@@ -289,151 +268,91 @@
             </div>
         </section>
 
-        
+       
+        <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+       
+    <div class="testimonials-container">
 
-
-        <section id="testimonials" class="testimonials-section">
-    <div class="section-title" data-animation="slideUp">
+      <div class="section-title" data-animation="slideUp">
         <h2>Testimonials</h2>
-        <p>What My Clients Say</p>
+        <p>Here are some thoughts from clients and collaborators I've worked with over the years. Their feedback has been invaluable in helping me grow as a professional.</p>
+      </div>
+
+      <div class="testimonials-carousel swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                I am extremely impressed with their work. The attention to detail and creative solutions provided exceeded our expectations and truly elevated our project.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="images/pic01.jpg" class="testimonial-img" alt="placeholder">
+              <h3>Sarah Johnson</h3>
+              <h4>CEO, TechStart</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Working with them was a pleasure. Their technical expertise combined with excellent communication skills made the entire development process smooth and efficient.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="images/pic03.jpg" class="testimonial-img" alt="placeholder">
+              <h3>Michael Brown</h3>
+              <h4>Marketing Director, InnovateCorp</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                An exceptional developer who delivers quality work consistently. They have a knack for understanding requirements and translating them into elegant, functional solutions.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="images/pic04.jpg" class="testimonial-img" alt="placeholder">
+              <h3>Jessica Williams</h3>
+              <h4>Project Manager, DesignHub</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                The website they built for us has significantly improved our online presence and user engagement. Their expertise in frontend development is truly remarkable.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="images/pic.jpeg" class="testimonial-img" alt="placeholder">
+              <h3>David Lee</h3>
+              <h4>Founder, CreativeMinds</h4>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Not only did they deliver a stunning website, but they also provided valuable insights on improving user experience and site performance. A true professional who goes above and beyond.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+              <img src="images/pic02.jpg" class="testimonial-img" alt="placeholder">
+              <h3>Emily Chen</h3>
+              <h4>E-commerce Manager, StyleShop</h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
     </div>
-    
-    <div class="testimonials-container" data-animation="fadeIn">
-        <div class="testimonial-item" data-animation="fadeIn">
-            <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            
-            <p class="testimonial-quote">
-                DevBee did an amazing job on our website. The attention to detail and responsiveness to our needs exceeded our expectations. Highly recommend!
-            </p>
-            
-            <div class="testimonial-profile">
-                <img src="images/testimonial-1.jpg" alt="John Smith" class="testimonial-img">
-                <div>
-                    <h3>John Smith</h3>
-                    <h4>CEO, Tech Solutions</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="testimonial-item" data-animation="fadeIn">
-            <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            
-            <p class="testimonial-quote">
-                Professional, creative, and incredibly responsive. The website DevBee created for our business has significantly improved our online presence.
-            </p>
-            
-            <div class="testimonial-profile">
-                <img src="images/testimonial-2.jpg" alt="Sarah Johnson" class="testimonial-img">
-                <div>
-                    <h3>Sarah Johnson</h3>
-                    <h4>Marketing Director, Design Studios</h4>
-                </div>
-            </div>
-        </div>
-        
-        <div class="testimonial-item" data-animation="fadeIn">
-            <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            
-            <p class="testimonial-quote">
-                Working with DevBee was a pleasure from start to finish. They understood our vision perfectly and delivered a website that perfectly captures our brand identity.
-            </p>
-            
-            <div class="testimonial-profile">
-                <img src="images/testimonial-3.jpg" alt="Michael Brown" class="testimonial-img">
-                <div>
-                    <h3>Michael Brown</h3>
-                    <h4>Founder, Creative Agency</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-item" data-animation="fadeIn">
-            <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            
-            <p class="testimonial-quote">
-                Partnering with DevBee to revamp our website was one of the best decisions we made last year. He delivered a modern, responsive design that elevated our brand's online presence.
-            </p>
-            
-            <div class="testimonial-profile">
-                <img src="images/testimonial-4.jpg" alt="Sarah M." class="testimonial-img">
-                <div>
-                    <h3>Sarah M.</h3>
-                    <h4>CEO, Thrive Retail</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-item" data-animation="fadeIn">
-            <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            
-            <p class="testimonial-quote">
-                DevBee built us a custom web application that completely streamlined our internal operations. Every feature was thoughtfully implemented. Truly a developer you can rely on.
-            </p>
-            
-            <div class="testimonial-profile">
-                <img src="images/testimonial-5.jpg" alt="James K." class="testimonial-img">
-                <div>
-                    <h3>James K.</h3>
-                    <h4>Operations Lead, FinScope Solutions</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="testimonial-item" data-animation="fadeIn">
-            <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            
-            <p class="testimonial-quote">
-                We needed an e-commerce platform that could handle high traffic. DevBee not only delivered — he added features we hadn't even thought of. We've seen a 40% sales boost since launch.
-            </p>
-            
-            <div class="testimonial-profile">
-                <img src="images/testimonial-6.jpg" alt="Amina R." class="testimonial-img">
-                <div>
-                    <h3>Amina R.</h3>
-                    <h4>Founder, Modé Wear</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+  </section><!-- End Testimonials Section -->
 
         
         <!-- Updated Contact Section (iPortfolio style) -->
@@ -509,16 +428,6 @@
 
 
         
-        <!-- <section id="testimonials" class="testimonials">
-            <h2 data-animation="slideUp">What Clients Say</h2>
-            <div class="testimonial" data-animation="slideRight">
-                <p>"DevBee did an amazing job on our website. Highly recommend!" - Client Name</p>
-            </div>
-            <div class="testimonial" data-animation="slideLeft">
-                <p>"Professional and creative. Exceeded our expectations!" - Client Name</p>
-            </div>
-        </section> -->
-        
     <footer>
         <div class="footer-social">
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
@@ -534,5 +443,6 @@
     <script src="script.js"></script>
     <script src="repeatable-animations.js"></script>
     <script src="welcome-animations.js"></script>
+    <script src="testimonial-section.js"></script>
 </body>
 </html>
