@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="welcome-enhancements.css">
     <link rel="stylesheet" href="testimonial-section.css">
+    <link rel="stylesheet" href="portfolio-section.css">
+    
     
     
 </head>
@@ -107,13 +109,13 @@
                   <div class="cta-container">
                     <a href="#portfolio" class="cta-button">See My Work</a>
                   </div>
-                </div>
+                
               </div>
         </section>
 
         <hr>
 
-         <!-- Updated About Section (iPortfolio style) -->
+         <!-- About Section  -->
          <section id="about" class="about-section">
             <div class="section-title" data-animation="slideUp">
                 <h2>About Me</h2>
@@ -158,7 +160,7 @@
             </div>
         </section>
         
-        <!-- Updated Skills Section (iPortfolio style) -->
+        <!-- Skills Section  -->
         <section id="skills" class="skills-section">
             <div class="section-title" data-animation="slideUp">
                 <h2>Skills</h2>
@@ -232,45 +234,74 @@
             </div>
         </section>
         
-                
-        <section id="portfolio" class="portfolio-highlights">
-            <div class="section-title" data-animation="slideUp">
-                <h2 data-animation="slideUp">Portfolio Highlights</h2>
+        <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section">
+    <div class="portfolio-container">
+        <div class="section-title" data-animation="slideUp">
+            <h2>Portfolio</h2>
+            <p>My Recent Work</p>
+        </div>
+
+        <div class="portfolio-carousel swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="portfolio-item" data-animation="fadeIn">
+                        <div class="portfolio-img-container">
+                            <a href="calculator/calculator.html">
+                                <img src="images/DevBee Calculator.png" alt="DevBee Calculator">
+                                <div class="project-overlay">
+                                    <div class="project-description">
+                                        <h3>DevBee Calculator</h3>
+                                        <p class="project-description-text">A responsive web calculator that performs basic arithmetic operations with a clean, intuitive interface.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="portfolio-item" data-animation="fadeIn">
+                        <div class="portfolio-img-container">
+                            <a href="counter/CounterApp.html">
+                                <img src="images/DevBee CounterApp.png" alt="DevBee Counter App">
+                                <div class="project-overlay">
+                                    <div class="project-description">
+                                        <h3>DevBee Counter App</h3>
+                                        <p class="project-description-text">A simple interactive counter tool built to increment, decrement, and reset values—ideal for learning state management.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="swiper-slide">
+                    <div class="portfolio-item" data-animation="fadeIn">
+                        <div class="portfolio-img-container">
+                            <a href="palindrome/Palindrome Checker.html">
+                                <img src="images/DevBee Palindrome Checker.png" alt="DevBee Palindrome Checker">
+                                <div class="project-overlay">
+                                    <div class="project-description">
+                                        <h3>DevBee Palindrome Checker</h3>
+                                        <p class="project-description-text">A lightweight utility that checks if a given string reads the same forward and backward, built with input validation.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="portfolio-item" data-animation="zoomIn">
-                <a href="calculator\calculator.html">
-                <img src="images\DevBee Calculator.png" alt="Project 1">
-                </a>
-                <h3>DevBee Calculator</h3>
-                <p class="project-description-text">A responsive web calculator that performs basic arithmetic operations with a clean, intuitive interface.</p>
-                <!-- <p>Brief description of the project.</p> -->
-            </div>
-            <div class="portfolio-item" data-animation="zoomIn">
-                <a href="counter/CounterApp.html">
-                <img src="images\DevBee CounterApp.png" alt="Project 2">
-                </a>
-                <h3>DevBee Counter App</h3>
-                <p class="project-description-text">A simple interactive counter tool built to increment, decrement, and reset values—ideal for learning state management.</p>
-                <!-- <p>Brief description of the project.</p> -->
-            </div>
-            <div class="portfolio-item" data-animation="zoomIn">
-                <a href="palindrome/Palindrome Checker.html">
-                <img src="images\DevBee Palindrome Checker.png" alt="Project 3">
-                </a>
-                <h3>DevBee Palindrome Checker</h3>
-                <p class="project-description-text"> A lightweight utility that checks if a given string reads the same forward and backward, built with input validation.
-                </p>
-                <!-- <p>Brief description of the project.</p> -->
-            </div>
-            <div class="view-more-project" data-animation="fadeIn">            
-                <a href="portfolio.html" class="view-more">View More Projects</a>
-            </div>
-        </section>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+       
+    </div>
+</section>
 
        
         <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <section id="testimonials" class="testimonials">
        
     <div class="testimonials-container">
 
@@ -279,79 +310,79 @@
         <p>Here are some thoughts from clients and collaborators I've worked with over the years. Their feedback has been invaluable in helping me grow as a professional.</p>
       </div>
 
-      <div class="testimonials-carousel swiper" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
+        <div class="testimonials-carousel swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
 
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                I am extremely impressed with their work. The attention to detail and creative solutions provided exceeded our expectations and truly elevated our project.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="images/pic01.jpg" class="testimonial-img" alt="placeholder">
-              <h3>Sarah Johnson</h3>
-              <h4>CEO, TechStart</h4>
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I am extremely impressed with their work. The attention to detail and creative solutions provided exceeded our expectations and truly elevated our project.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="images/pic01.jpg" class="testimonial-img" alt="placeholder">
+                <h3>Sarah Johnson</h3>
+                <h4>CEO, TechStart</h4>
+                </div>
             </div>
-          </div>
 
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Working with them was a pleasure. Their technical expertise combined with excellent communication skills made the entire development process smooth and efficient.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="images/pic03.jpg" class="testimonial-img" alt="placeholder">
-              <h3>Michael Brown</h3>
-              <h4>Marketing Director, InnovateCorp</h4>
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Working with them was a pleasure. Their technical expertise combined with excellent communication skills made the entire development process smooth and efficient.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="images/pic03.jpg" class="testimonial-img" alt="placeholder">
+                <h3>Michael Brown</h3>
+                <h4>Marketing Director, InnovateCorp</h4>
+                </div>
             </div>
-          </div>
 
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                An exceptional developer who delivers quality work consistently. They have a knack for understanding requirements and translating them into elegant, functional solutions.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="images/pic04.jpg" class="testimonial-img" alt="placeholder">
-              <h3>Jessica Williams</h3>
-              <h4>Project Manager, DesignHub</h4>
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    An exceptional developer who delivers quality work consistently. They have a knack for understanding requirements and translating them into elegant, functional solutions.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="images/pic04.jpg" class="testimonial-img" alt="placeholder">
+                <h3>Jessica Williams</h3>
+                <h4>Project Manager, DesignHub</h4>
+                </div>
             </div>
-          </div>
 
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                The website they built for us has significantly improved our online presence and user engagement. Their expertise in frontend development is truly remarkable.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="images/pic.jpeg" class="testimonial-img" alt="placeholder">
-              <h3>David Lee</h3>
-              <h4>Founder, CreativeMinds</h4>
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    The website they built for us has significantly improved our online presence and user engagement. Their expertise in frontend development is truly remarkable.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="images/pic.jpeg" class="testimonial-img" alt="placeholder">
+                <h3>David Lee</h3>
+                <h4>Founder, CreativeMinds</h4>
+                </div>
             </div>
-          </div>
 
-          <div class="swiper-slide">
-            <div class="testimonial-item">
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Not only did they deliver a stunning website, but they also provided valuable insights on improving user experience and site performance. A true professional who goes above and beyond.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-              <img src="images/pic02.jpg" class="testimonial-img" alt="placeholder">
-              <h3>Emily Chen</h3>
-              <h4>E-commerce Manager, StyleShop</h4>
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Not only did they deliver a stunning website, but they also provided valuable insights on improving user experience and site performance. A true professional who goes above and beyond.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="images/pic02.jpg" class="testimonial-img" alt="placeholder">
+                <h3>Emily Chen</h3>
+                <h4>E-commerce Manager, StyleShop</h4>
+                </div>
             </div>
-          </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
 
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-    </div>
   </section><!-- End Testimonials Section -->
 
         
@@ -444,5 +475,6 @@
     <script src="repeatable-animations.js"></script>
     <script src="welcome-animations.js"></script>
     <script src="testimonial-section.js"></script>
+    <script src="portfolio-section.js"></script>
 </body>
 </html>
