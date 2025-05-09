@@ -12,13 +12,6 @@
     padding: 0 15px;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
 .portfolio-item {
     background: var(--bg-primary);
     border-radius: 8px;
@@ -47,6 +40,10 @@
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
 }
 
 .project-overlay {
@@ -55,17 +52,20 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(108, 32, 32, 0.85); 
-    color: var(--text-light);
+    background: #edf6ffdf;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
 }
 
 body.dark-mode .project-overlay {
-    background: rgba(62, 149, 255, 0.85); /* Using dark mode blue9 with opacity */
+    background: #00254df0;
 }
 
 .portfolio-img-container:hover .project-overlay {
@@ -77,53 +77,44 @@ body.dark-mode .project-overlay {
     text-align: center;
     transform: translateY(20px);
     transition: transform 0.3s ease;
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
 }
 
 .portfolio-img-container:hover .project-description {
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
 }
 
 .project-description h3 {
     margin: 0 0 10px;
     font-size: 18px;
     font-weight: 700;
-    color: var(--text-light);
+    color: var(--blue12);
 }
 
 .project-description-text {
     font-size: 14px;
     line-height: 1.5;
     margin: 0;
-    color: var(--text-light);
+    color: var(--blue12);
 }
 
-.view-more-container {
-    text-align: center;
-    margin-top: 40px;
+body.dark-mode .project-description h3 {
+    color: var(--blue1);
 }
 
-.view-more-btn {
-    display: inline-block;
-    background: var(--blue9);
-    color: var(--text-light);
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.view-more-btn:hover {
-    background: var(--blue11);
-    box-shadow: 0 5px 15px var(--shadow-color);
-}
-
-body.dark-mode .view-more-btn {
-    background: var(--blue9);
-}
-
-body.dark-mode .view-more-btn:hover {
-    background: var(--blue11);
+body.dark-mode .project-description-text {
+    color:var(--blue1) ;
 }
 
 @keyframes fadeIn {
@@ -136,7 +127,11 @@ body.dark-mode .view-more-btn:hover {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
 }
 
 /* Swiper Styles */
@@ -159,6 +154,10 @@ body.dark-mode .view-more-btn:hover {
     transition-property: transform;
     box-sizing: content-box;
     transition: transform 0.6s ease;
+    -webkit-transition: transform 0.6s ease;
+    -moz-transition: transform 0.6s ease;
+    -ms-transition: transform 0.6s ease;
+    -o-transition: transform 0.6s ease;
 }
 
 .swiper-slide {
@@ -178,6 +177,14 @@ body.dark-mode .view-more-btn:hover {
     transition: 300ms opacity;
     transform: translate3d(0, 0, 0);
     z-index: 10;
+    -webkit-transition: 300ms opacity;
+    -moz-transition: 300ms opacity;
+    -ms-transition: 300ms opacity;
+    -o-transition: 300ms opacity;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
 }
 
 .swiper-pagination-bullet {
